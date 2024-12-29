@@ -5,13 +5,13 @@ Description: >
   
 Globals:
   Function:
-    Timeout: 6000
+    Timeout: 900
 
 Resources:
-  DefaultRole:
+  SoundcloudRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: DefaultRole
+      RoleName: SoundcloudRole
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -38,7 +38,7 @@ Resources:
       Runtime: nodejs18.x
       Role:
         Fn::GetAtt:
-          - DefaultRole
+          - SoundcloudRole
           - Arn
       Events:
         ScheduledEvent:

@@ -7,4 +7,4 @@ sam local invoke "PlaylistBackupFn"
 ## Deploy
 
 ```
-sam deploy --stack-name ronda-web --s3-bucket mucadoo-cloudformation --region us-weast-1 --capabilities CAPABILITY_NAMED_IAM
+sam deploy --template-file template.yaml --stack-name soundcloud-backup --s3-bucket mucadoo-cloudformation --region us-east-2 --capabilities CAPABILITY_NAMED_IAM --profile mucadoo
