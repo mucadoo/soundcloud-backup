@@ -35,7 +35,7 @@ Resources:
     Properties:
       CodeUri: playlist-backup/
       Handler: app.lambdaHandler
-      Runtime: nodejs18.x
+      Runtime: nodejs22.x
       Role:
         Fn::GetAtt:
           - SoundcloudRole
